@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlaskBlog</title>
+</head>
+<body>
+    <div style="background:url({{url_for('static', filename='bg_img.jpg')}}) no-repeat;width:1500;height:4000px">
+    <a href="/">Home</a>
+ <div class="toay_data" style="text-align: center;"
+    <h1 style="text-align: center;">&nbsp;</h1>
+    
+    </div>
+ <div class="week_data" style="text-align: center;"
+    <h1 style="text-align: left;"><em><font size = '10'>One week weather forecast</font></em></h1>  
+    <p </p>
+
+
+    {% for dict_item in weather_data %}
+        <p>Time: {{dict_item.name + dict_item.startTime}}</p> 
+        <p>temperature: {{dict_item.temperature }}°F</p>
+        <p>Wind: {{dict_item.windSpeed}}</p>
+        <p>{{dict_item.detailedForecast}}</p>
+    {% endfor %}
+     <p </p>
+
+    
+    </div>
+
+</body>
+</html>

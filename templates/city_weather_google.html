@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlaskBlog</title>
+</head>
+<body>
+    <div style="background:url({{url_for('static', filename='bg_img.jpg')}}) no-repeat;width:1500;height:4000px">
+    <a href="/">Home</a>
+ <div class="toay_data" style="text-align: center;"
+    <h1 style="text-align: center;">&nbsp;</h1>
+    <p type="submit"><font size = '6'><em>Current Weather in {{weather_data['location']}} </em></font></p>
+    <p type="submit">Time: {{weather_data['time']}} </p> 
+    <p type="submit">Current temperature: {{weather_data['temperature']}}°F </p> 
+    <p type="submit">Weather condition: {{weather_data['info']}} </p>
+    <p type="submit">Precipitation: {{weather_data['precipitation']}} </p>
+    <p type="submit">Humidity: {{weather_data['humidity']}} </p>
+    <p type="submit">Wind: {{weather_data['wind']}} </p>
+    </div>
+ <div class="week_data" style="text-align: center;"
+    <h1 style="text-align: left;"><em><font size = '6'>One week weather forecast</font></em></h1>  
+    <p></p>
+    {% for i in weather_data[1] %}
+        {{ i }}
+    {% endfor %}
+    <p></p>
+    {% for i in weather_data[2] %}
+        {{ i }}
+    {% endfor %}
+    <p></p>
+    {% for i in weather_data[3] %}
+        {{ i }}
+    {% endfor %}
+    <p></p>
+    {% for i in weather_data[4] %}
+        {{ i }}
+    {% endfor %}
+    <p></p>
+    {% for i in weather_data[5] %}
+        {{ i }}
+    {% endfor %}
+    <p></p>
+    {% for i in weather_data[6] %}
+        {{ i }}
+    {% endfor %}
+    <p></p>
+    {% for i in weather_data[7] %}
+        {{ i }}
+    {% endfor %}
+    <p></p>
+    
+    </div>
+
+</body>
+</html>

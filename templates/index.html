@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlaskBlog</title>
+</head>
+<body>
+ <div class="main">
+   <div style="background:url({{url_for('static', filename='bg_img.jpg')}}) no-repeat;width:1500;height:900px"> 
+    <h1 style="text-align: center;">&nbsp;</h1>
+    <h1 style="text-align: center;">&nbsp;</h1>
+    <h1 style="text-align: center;">&nbsp;</h1>
+    <h1 style="text-align: center;">&nbsp;</h1>
+    <h1 style="text-align: center;"><font size = '10'>Weather Searching</font></h1>
+
+ <div class="form-group" style="text-align: center;">
+        <input class="form-control transparent" id="cityName" placeholder="Type" style = "width:300px;height:30px;"/>
+        <p><button type="submit" href="javascript:void(0);" style = "width:150px;height:30px;" onclick="getCityWeather() ;" >Search</button></p>
+    </div>
+    
+    </div>
+
+    <script type="text/javascript">
+        function getCityWeather(){
+            location.href = '/' + document.getElementById('cityName').value;
+        }
+    </script>
+    
+</body>
+</html>
